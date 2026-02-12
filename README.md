@@ -67,7 +67,7 @@ Para personalizar el contenido:
 ## 📧 Contacto
 
 Para consultas sobre el sitio web o servicios de La Voz de Mi Linaje:
-- Email: contacto@lavozdemihinaje.com
+- Email: contacto@lavozdemilinage.com
 - Teléfono: +1 (555) 123-4567
 
 ## 📄 Licencia
