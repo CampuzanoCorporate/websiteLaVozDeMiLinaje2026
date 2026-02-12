@@ -2,19 +2,38 @@
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('navMenu');
 
-hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    hamburger.classList.toggle('active');
-});
-
-// Close mobile menu when clicking on a link
-const navLinks = document.querySelectorAll('.nav-link');
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-        hamburger.classList.remove('active');
+if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        hamburger.classList.toggle('active');
     });
-});
+
+    // Close mobile menu when clicking on a link
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            hamburger.classList.remove('active');
+        });
+    });
+}
+
+// Dark Mode Toggle
+const darkModeToggle = document.getElementById('darkModeToggle');
+if (darkModeToggle) {
+    darkModeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        // Save preference to localStorage
+        const isDarkMode = document.body.classList.contains('dark-mode');
+        localStorage.setItem('darkMode', isDarkMode);
+    });
+
+    // Load dark mode preference
+    const savedDarkMode = localStorage.getItem('darkMode');
+    if (savedDarkMode === 'true') {
+        document.body.classList.add('dark-mode');
+    }
+}
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -32,38 +51,31 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Contact Form Handling
 const contactForm = document.getElementById('contactForm');
-
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Get form values
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-    
-    // In a real application, this would send the data to a server
-    // For now, we'll just show an alert
-    alert(`¡Gracias por tu mensaje, ${name}! Te responderemos pronto a ${email}.`);
-    
-    // Reset form
-    contactForm.reset();
-});
-
-// Add scroll effect to header
-let lastScroll = 0;
-const header = document.querySelector('.header');
-
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-    
-    if (currentScroll > lastScroll && currentScroll > 100) {
-        header.style.transform = 'translateY(-100%)';
-    } else {
-        header.style.transform = 'translateY(0)';
-    }
-    
-    lastScroll = currentScroll;
-});
+if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const formData = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            service: document.getElementById('service').value,
+            message: document.getElementById('message').value
+        };
+        
+        // Show success message
+        alert(`¡Gracias ${formData.name}! Tu solicitud ha sido enviada. Te contactaré pronto a ${formData.email}.`);
+        
+        // Reset form
+        contactForm.reset();
+        
+        // In production, you would send this to a backend:
+        // await fetch('/api/contact', {
+        //     method: 'POST',
+        //     headers: { 'Content-Type': 'application/json' },
+        //     body: JSON.stringify(formData)
+        // });
+    });
+}
 
 // Intersection Observer for fade-in animations
 const observerOptions = {
@@ -80,7 +92,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe service cards and other elements
+// Observe service cards and other elements for animations
 document.addEventListener('DOMContentLoaded', () => {
     const serviceCards = document.querySelectorAll('.service-card');
     serviceCards.forEach(card => {
@@ -88,5 +100,35 @@ document.addEventListener('DOMContentLoaded', () => {
         card.style.transform = 'translateY(20px)';
         card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(card);
+    });
+    
+    // Observe about section
+    const aboutContent = document.querySelector('.about-content');
+    if (aboutContent) {
+        aboutContent.style.opacity = '0';
+        aboutContent.style.transform = 'translateY(20px)';
+        aboutContent.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        observer.observe(aboutContent);
+    }
+});
+
+// Scroll progress indicator (optional)
+window.addEventListener('scroll', () => {
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    
+    // You can add a progress bar element if desired
+    // document.getElementById('progressBar').style.width = scrolled + '%';
+});
+
+// Reserve button click handler
+const reserveButtons = document.querySelectorAll('.btn-reserve');
+reserveButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const contactSection = document.getElementById('contacto');
+        if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
     });
 });
