@@ -592,6 +592,740 @@ em {
     color: var(--white);
 }
 
+/* About Page - Hero Section */
+.about-hero {
+    background-color: var(--white);
+    padding: 80px 20px 100px;
+}
+
+.about-hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: var(--shadow-hover);
+}
+
+.about-hero-title {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+}
+
+.about-hero-title em {
+    color: var(--primary-green);
+}
+
+.about-hero-description {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+/* Linaje Calling Section */
+.linaje-calling {
+    background-color: var(--bg-beige);
+    padding: 100px 20px;
+}
+
+.linaje-calling .container {
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.calling-title {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: var(--text-dark);
+}
+
+.calling-text p {
+    font-size: 1rem;
+    color: var(--text-light);
+    line-height: 1.9;
+    margin-bottom: 1.5rem;
+}
+
+.calling-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    color: var(--primary-green);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.highlight-quote {
+    background-color: var(--white);
+    padding: 2rem;
+    border-left: 4px solid var(--primary-green);
+    margin: 2rem 0;
+    border-radius: 4px;
+}
+
+.highlight-quote p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-style: italic;
+    color: var(--text-dark);
+    margin: 0;
+}
+
+.calling-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 100px;
+}
+
+/* Philosophy Section */
+.philosophy-section {
+    background-color: var(--white);
+    padding: 100px 20px;
+}
+
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.philosophy-card {
+    text-align: center;
+    padding: 2rem;
+}
+
+.philosophy-icon {
+    color: var(--primary-green);
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.philosophy-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.philosophy-card p {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+/* CTA Section */
+.cta-section {
+    background-color: var(--bg-beige);
+    padding: 100px 20px;
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cta-title {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+}
+
+.cta-description {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Stats Section */
+.stats-section {
+    background-color: var(--white);
+    padding: 80px 20px;
+}
+
+.stats-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: var(--primary-green);
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+/* Contact Page Styles */
+.contact-hero {
+    background-color: var(--bg-beige);
+    padding: 80px 20px 60px;
+    text-align: center;
+}
+
+.contact-hero-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-hero-subtitle {
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.contact-hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+}
+
+.contact-hero-description {
+    font-size: 1.05rem;
+    color: var(--text-light);
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Main Contact Section */
+.main-contact-section {
+    background-color: var(--bg-beige);
+    padding: 40px 20px 100px;
+}
+
+.main-contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.contact-form-wrapper {
+    background-color: var(--white);
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.contact-form-main {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+    cursor: pointer;
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: auto;
+    margin-top: 0.2rem;
+    cursor: pointer;
+}
+
+.checkbox-label a {
+    color: var(--primary-green);
+    text-decoration: none;
+}
+
+.checkbox-label a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Info Sidebar */
+.contact-info-sidebar {
+    position: sticky;
+    top: 100px;
+}
+
+.contact-info-card {
+    background-color: var(--white);
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.contact-info-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: var(--text-dark);
+}
+
+.contact-info-item {
+    display: flex;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.contact-info-item:last-of-type {
+    border-bottom: none;
+    margin-bottom: 2.5rem;
+    padding-bottom: 0;
+}
+
+.contact-info-icon {
+    color: var(--primary-green);
+    flex-shrink: 0;
+}
+
+.contact-info-label {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: var(--text-light);
+    margin-bottom: 0.4rem;
+    font-weight: 500;
+}
+
+.contact-info-value {
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.contact-info-sublabel {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-top: 0.3rem;
+}
+
+.contact-social-section {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.contact-social-label {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.contact-social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.contact-social-links a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--bg-beige);
+    color: var(--text-dark);
+    transition: all 0.3s ease;
+}
+
+.contact-social-links a:hover {
+    background-color: var(--primary-green);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+/* FAQ Section */
+.faq-section {
+    background-color: var(--white);
+    padding: 100px 20px;
+}
+
+.faq-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--text-dark);
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    margin-bottom: 0;
+}
+
+.faq-question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+    color: var(--primary-green);
+}
+
+.faq-icon {
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+    color: var(--primary-green);
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+}
+
+.faq-answer p {
+    padding: 0 0 1.5rem 0;
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+/* Services Page Styles */
+.services-hero {
+    background-color: var(--bg-beige);
+    padding: 80px 20px 60px;
+    text-align: center;
+}
+
+.services-hero-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.services-hero-subtitle {
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.services-hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+}
+
+.services-hero-title em {
+    color: var(--primary-green);
+}
+
+.services-hero-description {
+    font-size: 1.05rem;
+    color: var(--text-light);
+    line-height: 1.8;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+/* Services Catalog */
+.services-catalog {
+    background-color: var(--bg-beige);
+    padding: 60px 20px 80px;
+}
+
+.services-catalog-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+}
+
+.service-card-detailed {
+    background-color: var(--white);
+    padding: 3rem 2.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.service-card-detailed:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+}
+
+.service-card-detailed.featured-service {
+    background-color: var(--primary-green);
+    color: var(--white);
+}
+
+.service-badge {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background-color: var(--white);
+    color: var(--primary-green);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.service-icon {
+    color: var(--primary-green);
+    margin-bottom: 1.5rem;
+}
+
+.service-card-detailed.featured-service .service-icon {
+    color: var(--white);
+}
+
+.service-card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.service-card-detailed.featured-service .service-card-title {
+    color: var(--white);
+}
+
+.service-card-description {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.service-card-detailed.featured-service .service-card-description {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.service-details-list {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.service-details-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+}
+
+.service-card-detailed.featured-service .service-details-list li {
+    color: var(--white);
+}
+
+.service-details-list svg {
+    flex-shrink: 0;
+    color: var(--primary-green);
+}
+
+.service-card-detailed.featured-service .service-details-list svg {
+    color: var(--white);
+}
+
+.service-btn {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 2rem;
+}
+
+/* Mentoria Section */
+.mentoria-section {
+    background-color: var(--white);
+    padding: 100px 20px;
+}
+
+.mentoria-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: var(--bg-beige);
+    border-radius: 12px;
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.mentoria-icon {
+    color: var(--primary-green);
+    margin-bottom: 1.5rem;
+}
+
+.mentoria-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+}
+
+.mentoria-description {
+    font-size: 1rem;
+    color: var(--text-light);
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+}
+
+.mentoria-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.mentoria-feature {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+}
+
+.mentoria-feature svg {
+    flex-shrink: 0;
+    color: var(--primary-green);
+}
+
+.mentoria-pricing {
+    background-color: var(--white);
+    padding: 3rem 2.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.mentoria-price-label {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.mentoria-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem;
+    font-weight: 600;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+}
+
+.mentoria-price-note {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.mentoria-btn {
+    width: 100%;
+}
+
+/* Services CTA */
+.services-cta {
+    background-color: var(--bg-beige);
+    padding: 100px 20px;
+}
+
+.services-cta-container {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.services-cta-icon {
+    color: var(--primary-green);
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.services-cta-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+}
+
+.services-cta-description {
+    font-size: 1.05rem;
+    color: var(--text-light);
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+}
+
 /* Responsive Design */
 @media (max-width: 968px) {
     .nav-menu {
@@ -635,6 +1369,73 @@ em {
     .footer-social {
         justify-content: center;
     }
+
+    /* About Page Responsive */
+    .about-hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .about-hero-title {
+        font-size: 2.5rem;
+    }
+
+    .linaje-calling .container {
+        grid-template-columns: 1fr;
+    }
+
+    .calling-image {
+        order: -1;
+    }
+
+    .calling-image img {
+        position: static;
+    }
+
+    .philosophy-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-title {
+        font-size: 2.2rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    /* Contact Page Responsive */
+    .main-contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info-sidebar {
+        position: static;
+    }
+
+    .contact-hero-title {
+        font-size: 3rem;
+    }
+
+    /* Services Page Responsive */
+    .services-catalog-container {
+        grid-template-columns: 1fr;
+    }
+
+    .services-hero-title {
+        font-size: 3rem;
+    }
+
+    .mentoria-container {
+        grid-template-columns: 1fr;
+        padding: 3rem 2rem;
+        gap: 3rem;
+    }
+
+    .mentoria-features {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 640px) {
@@ -656,5 +1457,69 @@ em {
     
     .header-actions .btn-reserve {
         display: none;
+    }
+
+    .about-hero-title {
+        font-size: 2rem;
+    }
+
+    .calling-title {
+        font-size: 2rem;
+    }
+
+    .calling-quote {
+        font-size: 1.2rem;
+    }
+
+    .highlight-quote p {
+        font-size: 1.1rem;
+    }
+
+    .cta-title {
+        font-size: 1.8rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+    }
+
+    .contact-hero-title {
+        font-size: 2.5rem;
+    }
+
+    .contact-form-wrapper {
+        padding: 2rem 1.5rem;
+    }
+
+    .faq-title {
+        font-size: 2rem;
+    }
+
+    .services-hero-title {
+        font-size: 2.5rem;
+    }
+
+    .service-card-detailed {
+        padding: 2rem 1.5rem;
+    }
+
+    .mentoria-container {
+        padding: 2rem 1.5rem;
+    }
+
+    .mentoria-title {
+        font-size: 2rem;
+    }
+
+    .mentoria-price {
+        font-size: 3rem;
+    }
+
+    .services-cta-title {
+        font-size: 2rem;
     }
 }

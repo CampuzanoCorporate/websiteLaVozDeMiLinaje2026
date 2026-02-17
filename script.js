@@ -56,14 +56,16 @@ if (contactForm) {
         e.preventDefault();
         
         const formData = {
-            name: document.getElementById('name').value,
+            nombre: document.getElementById('nombre').value,
+            apellidos: document.getElementById('apellidos').value,
             email: document.getElementById('email').value,
-            service: document.getElementById('service').value,
-            message: document.getElementById('message').value
+            telefono: document.getElementById('telefono').value,
+            asunto: document.getElementById('asunto').value,
+            mensaje: document.getElementById('mensaje').value
         };
         
         // Show success message
-        alert(`¡Gracias ${formData.name}! Tu solicitud ha sido enviada. Te contactaré pronto a ${formData.email}.`);
+        alert(`¡Gracias ${formData.nombre}! Tu mensaje ha sido enviado. Te contactaré pronto a ${formData.email}.`);
         
         // Reset form
         contactForm.reset();
@@ -76,6 +78,28 @@ if (contactForm) {
         // });
     });
 }
+
+// FAQ Accordion
+document.addEventListener('DOMContentLoaded', () => {
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            const faqItem = question.parentElement;
+            const isActive = faqItem.classList.contains('active');
+            
+            // Close all other FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Toggle current item
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        });
+    });
+});
 
 // Intersection Observer for fade-in animations
 const observerOptions = {
@@ -125,7 +149,13 @@ window.addEventListener('scroll', () => {
 // Reserve button click handler
 const reserveButtons = document.querySelectorAll('.btn-reserve');
 reserveButtons.forEach(button => {
-    button.addEventListener('click', () => {
+    button.addEventListener('click', (e) => {
+        // Check if it's an anchor tag with href
+        if (button.tagName === 'A') {
+            return; // Let the link work normally
+        }
+        
+        e.preventDefault();
         const contactSection = document.getElementById('contacto');
         if (contactSection) {
             contactSection.scrollIntoView({ behavior: 'smooth' });
