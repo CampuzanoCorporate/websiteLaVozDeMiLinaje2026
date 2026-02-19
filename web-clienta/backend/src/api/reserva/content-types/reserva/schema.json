@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reservas",
+  "info": {
+    "singularName": "reserva",
+    "pluralName": "reservas",
+    "displayName": "Reserva"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "NombreCliente": {
+      "type": "string"
+    },
+    "EmailCliente": {
+      "type": "email"
+    },
+    "FechaHora": {
+      "type": "datetime"
+    },
+    "EstadoPago": {
+      "type": "string"
+    },
+    "servicio": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::servicio.servicio",
+      "inversedBy": "reservas"
+    },
+    "disponibilidad": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::disponibilidad.disponibilidad"
+    }
+  }
+}

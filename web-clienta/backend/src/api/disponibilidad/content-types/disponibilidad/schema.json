@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "disponibilidads",
+  "info": {
+    "singularName": "disponibilidad",
+    "pluralName": "disponibilidads",
+    "displayName": "Disponibilidad"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "FechaHora": {
+      "type": "datetime"
+    },
+    "Ocupado": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}
