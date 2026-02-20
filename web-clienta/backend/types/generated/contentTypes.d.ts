@@ -430,6 +430,42 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiContactameContactame extends Struct.CollectionTypeSchema {
+  collectionName: 'contactames';
+  info: {
+    displayName: 'Contactame';
+    pluralName: 'contactames';
+    singularName: 'contactame';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Apellidos: Schema.Attribute.String & Schema.Attribute.Required;
+    Asunto: Schema.Attribute.String & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Email: Schema.Attribute.Email & Schema.Attribute.Required;
+    EmailEnviado: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    Leido: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::contactame.contactame'
+    > &
+      Schema.Attribute.Private;
+    Mensaje: Schema.Attribute.Text & Schema.Attribute.Required;
+    Nombre: Schema.Attribute.String & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    Respuesta: Schema.Attribute.Text;
+    Telefono: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiDisponibilidadDisponibilidad
   extends Struct.CollectionTypeSchema {
   collectionName: 'disponibilidads';
@@ -1038,6 +1074,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::contactame.contactame': ApiContactameContactame;
       'api::disponibilidad.disponibilidad': ApiDisponibilidadDisponibilidad;
       'api::reserva.reserva': ApiReservaReserva;
       'api::servicio.servicio': ApiServicioServicio;
