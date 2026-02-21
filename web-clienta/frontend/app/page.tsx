@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 // Función para obtener servicios desde Strapi
 async function getServicios() {
   try {
-    const res = await fetch('http://localhost:1337/api/servicios?populate=*', {
+    const res = await fetch('process.env.NEXT_PUBLIC_API_URL/api/servicios?populate=*', {
       cache: 'no-store'
     });
     

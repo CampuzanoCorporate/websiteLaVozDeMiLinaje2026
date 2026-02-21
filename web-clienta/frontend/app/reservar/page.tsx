@@ -54,8 +54,8 @@ export default function ReservarPage() {
     const fetchData = async () => {
       try {
         const [resServicios, resDisponibilidad] = await Promise.all([
-          fetch("http://localhost:1337/api/servicios"),
-          fetch("http://localhost:1337/api/disponibilidads?filters[Ocupado][$eq]=false")
+          fetch("process.env.NEXT_PUBLIC_API_URL/api/servicios"),
+          fetch("process.env.NEXT_PUBLIC_API_URL/api/disponibilidads?filters[Ocupado][$eq]=false")
         ]);
         
         const dataServicios = await resServicios.json();
@@ -125,7 +125,7 @@ export default function ReservarPage() {
 
     try {
       // 1. Crear la reserva
-      const resReserva = await fetch("http://localhost:1337/api/reservas", {
+      const resReserva = await fetch("process.env.NEXT_PUBLIC_API_URL/api/reservas", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -141,7 +141,7 @@ export default function ReservarPage() {
 
       if (resReserva.ok) {
         // 2. Marcar el hueco como ocupado
-        await fetch(`http://localhost:1337/api/disponibilidads/${formData.disponibilidadId}`, {
+        await fetch(`process.env.NEXT_PUBLIC_API_URL/api/disponibilidads/${formData.disponibilidadId}`, {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ data: { Ocupado: true } }),

@@ -29,7 +29,7 @@ export default function ContactaPage() {
     setSubmitStatus({ type: null, message: "" });
 
     try {
-      const response = await fetch("http://localhost:1337/api/contactames", {
+      const response = await fetch("process.env.NEXT_PUBLIC_API_URL/api/contactames", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
