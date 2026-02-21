@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contactames",
+  "info": {
+    "singularName": "contactame",
+    "pluralName": "contactames",
+    "displayName": "Contactame"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Nombre": {
+      "type": "string",
+      "required": true
+    },
+    "Apellidos": {
+      "type": "string",
+      "required": true
+    },
+    "Email": {
+      "type": "email",
+      "required": true
+    },
+    "Telefono": {
+      "type": "string"
+    },
+    "Asunto": {
+      "type": "string",
+      "required": true
+    },
+    "Mensaje": {
+      "type": "text",
+      "required": true
+    },
+    "Leido": {
+      "type": "boolean",
+      "default": false
+    },
+    "Respuesta": {
+      "type": "text"
+    },
+    "EmailEnviado": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}
