@@ -231,50 +231,6 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* Contact Form Section */}
-      <section id="contacto" className="contact-form-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Agenda tu Encuentro</h2>
-            <p className="section-description">
-              Da el primer paso hacia tu sanación. Completa el formulario y me pondré en contacto contigo.
-            </p>
-          </div>
-          <form className="contact-form" id="contactForm">
-            <div className="form-row">
-              <div className="form-group">
-                <label htmlFor="name">Nombres Completos</label>
-                <input type="text" id="name" name="name" placeholder="Tu nombre" required />
-              </div>
-              <div className="form-group">
-                <label htmlFor="email">Correo Electrónico</label>
-                <input type="email" id="email" name="email" placeholder="correo@email.com" required />
-              </div>
-            </div>
-            <div className="form-group">
-              <label htmlFor="service">Servicio de Interés</label>
-              <select id="service" name="service" required>
-                <option value="">Selecciona un servicio</option>
-                {serviciosMostrados.map((servicio: any) => {
-                  const titulo = servicio.Titulo || servicio.attributes?.Titulo;
-                  return (
-                    <option key={servicio.id} value={titulo}>
-                      {titulo}
-                    </option>
-                  );
-                })}
-                <option value="otro">Otro</option>
-              </select>
-            </div>
-            <div className="form-group">
-              <label htmlFor="message">Mensaje Opcional</label>
-              <textarea id="message" name="message" rows={5} placeholder="Cuéntame brevemente qué buscas sanar..."></textarea>
-            </div>
-            <button type="submit" className="btn btn-primary btn-submit">ENVIAR SOLICITUD</button>
-          </form>
-        </div>
-      </section>
       <Footer />
 
     </>

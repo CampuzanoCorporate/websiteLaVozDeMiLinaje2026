@@ -96,7 +96,7 @@ export default async function ServiciosPage() {
                   {precio}€
                 </p>
                 
-                <a href="/reserva" className="btn btn-primary service-btn">
+                <a href="/reservar" className="btn btn-primary service-btn">
                   RESERVAR AHORA →
                 </a>
               </div>
@@ -157,7 +157,7 @@ export default async function ServiciosPage() {
           
           <div className="mentoria-pricing">
             <p className="mentoria-price-label">INVERSIÓN MENSUAL</p>
-            <p className="mentoria-price">$XXX</p>
+            <p className="mentoria-price">XXX€</p>
             <p className="mentoria-price-note">
               El precio se ajusta según tus necesidades específicas. 
               Contáctanos para más información.
@@ -183,8 +183,8 @@ export default async function ServiciosPage() {
             y el descubrimiento de tu verdadero propósito.
           </p>
           <div className="cta-buttons">
-            <a href="/reserva" className="btn btn-primary">RESERVAR CITA</a>
-            <a href="/contactame" className="btn btn-secondary">CONOCE MÁS</a>
+            <a href="/reservar" className="btn btn-primary">RESERVAR CITA</a>
+            <a href="/contacta" className="btn btn-secondary">CONOCE MÁS</a>
           </div>
         </div>
       </section>

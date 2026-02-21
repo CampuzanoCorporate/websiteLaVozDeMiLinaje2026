@@ -105,7 +105,7 @@ export default function ConocenosPage() {
             <p className="cta-description">Si sientes el llamado a sanar tus raíces para desplegar tus alas, estoy aquí para acompañarte. Explora las diferentes formas en las que podemos trabajar juntos.</p>
             <div className="cta-buttons">
               <Link href="/servicios" className="btn btn-primary">VER MIS SERVICIOS →</Link>
-              <Link href="/contacto" className="btn btn-secondary">ESCRÍBEME</Link>
+              <Link href="/contacta" className="btn btn-secondary">ESCRÍBEME</Link>
             </div>
           </div>
         </div>
